@@ -1,4 +1,4 @@
-- nanme: demo on filters/functions
+- name: demo on filters/functions
   hosts: local
   connection: local
   tasks:
