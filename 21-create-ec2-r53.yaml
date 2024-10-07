@@ -42,14 +42,14 @@
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
-      record: "{{ item.item}}.{{ zone }}"
+      record: "{{ zone }}"
       type: A
       ttl: 1
       value: "{{ item.instances[0].public_ip_adress }}"
       wait: true
       overwrite: true
     loop: "{{ ec2_instances.results }}" 
-    when: ec2_instances.results.item == "frontend"
+    when: item.item == "frontend"
 
 
  
