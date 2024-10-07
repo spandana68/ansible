@@ -4,28 +4,28 @@
   tasks:
   - name: print the default variable
     ansible.builtin.debug:
-      msg: "Hello {{ course }}"
+      msg: "Hello {{ course | default('admin') }}"
 
-- name: convert to uppercase
-  vars:
-    greeting: "Hello Ramesh"
-  ansible.builtin.debug:
-    msg: " {{ greeting | upper }}"
+# - name: convert to uppercase
+#   vars:
+#     greeting: "Hello Ramesh"
+#   ansible.builtin.debug:
+#     msg: " {{ greeting | upper }}"
 
-- name: convert to lowercase
-  vars:
-    greeting: "Hello Ramesh"
-  ansible.builtin.debug:
-    msg: " {{ greeting | lower }}"
+# - name: convert to lowercase
+#   vars:
+#     greeting: "Hello Ramesh"
+#   ansible.builtin.debug:
+#     msg: " {{ greeting | lower }}"
 
-- name: get the unique values
-  vars: 
-    numbers: [1,2,3,4,5,2,3,1]
-  ansible.builtin.debug:
-    msg: "{{ numbers | unique }}"
+# - name: get the unique values
+#   vars: 
+#     numbers: [1,2,3,4,5,2,3,1]
+#   ansible.builtin.debug:
+#     msg: "{{ numbers | unique }}"
 
--  name: get the unique values
-   vars: 
-    numbers: [1,2,3,4,5,2,3,1]
-   ansible.builtin.debug:
-    msg: " Min: {{ numbers | min , Max: {{ numbers | max }}"
+# -  name: get the unique values
+#    vars: 
+#     numbers: [1,2,3,4,5,2,3,1]
+#    ansible.builtin.debug:
+#     msg: " Min: {{ numbers | min , Max: {{ numbers | max }}"
