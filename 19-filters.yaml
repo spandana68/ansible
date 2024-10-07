@@ -1,6 +1,5 @@
 - name: demo on filters/functions
-  hosts: local
-  connection: local
+  hosts: web
   tasks:
   - name: print the default variable
     ansible.builtin.debug:
