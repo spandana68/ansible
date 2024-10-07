@@ -12,11 +12,11 @@
   ansible.builtin.debug:
     msg: " {{ greeting | upper }}"
 
-# - name: convert to lowercase
-#   vars:
-#     greeting: "Hello Ramesh"
-#   ansible.builtin.debug:
-#     msg: " {{ greeting | lower }}"
+- name: convert to lowercase
+  vars:
+    greeting: "Hello Ramesh"
+  ansible.builtin.debug:
+    msg: " {{ greeting | lower }}"
 
 # - name: get the unique values
 #   vars: 
